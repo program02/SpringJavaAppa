@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:c="http://www.springframework.org/schema/c"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:util="http://www.springframework.org/schema/util"
+
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+          http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd
+          http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.0.xsd
+">
+    <bean id="st" class="com.exam.Student" >
+        <property name="name" value="Rumpa"></property>
+        <property name="computer" ref="c"> </property>
+        <property name="stList">
+            <list>
+                <value>A</value>
+                <value>B</value>
+                <value>C</value>
+                <value>D</value>
+            </list>
+        </property>
+        <property name="stSet">
+            <set>
+                <value>X</value>
+                <value>Y</value>
+                <value>Z</value>
+            </set>
+        </property>
+        <property name="stMap">
+            <map>
+                <entry key="b" value="Bangladesh"></entry>
+                <entry key="uk" value="Britain"></entry>
+                <entry key="us" value="America"></entry>
+            </map>
+        </property>
+    </bean>
+    <bean id="c" class="com.exam.Computer" >       
+        <constructor-arg value="Brand name is Intel"></constructor-arg>
+    </bean>
+
+</beans>
